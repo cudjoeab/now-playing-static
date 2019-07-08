@@ -195,3 +195,147 @@ figure {
 .about > p {
   margin: 0;
 }
+
+/*-BREAKPOINT 1-*/
+
+@media (min-width:768px) {
+
+  .site-logo {
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    width: 80px;
+    height: 80px;
+    margin: 0;
+    z-index: 200;
+  }
+  
+  .site-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100px; 
+    z-index: 100; 
+    background-color: #ffffff;
+    
+    
+  }
+  
+  .site-nav-list,
+  .footer-nav-list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: block; 
+
+  }
+
+  .site-nav-list {
+    margin-top: 125px; 
+  }
+
+  .site-nav-item { 
+    width: 100%;
+    height: 60px;
+    padding: 0.75em;
+    font-family: "Montserrat", "Source Code Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 0.6em;
+    text-align: center;
+    text-transform: uppercase;
+    display: block; 
+  }
+  
+  .site-nav-item > .fa {
+    font-size: 1.75rem;
+  }
+  
+  .site-nav-item:hover {
+    background-color: #333333;
+    color: #ffffff;
+    cursor: pointer;
+  }
+  
+  .site-nav-item-label {
+    display: block;
+    margin-top: 0.5em;
+
+}
+
+body {
+  position: relative;
+}
+
+main {
+  margin-left: 100px; 
+}
+
+.movie-overview {
+  display: block; 
+}
+
+.site-footer {
+  margin-left: 100px; 
+  display: grid; 
+  grid-template-columns: 50% 50%; 
+  
+}
+
+.footer-nav {
+  background-color: black;
+  color: white; 
+}
+
+.about {
+  background-color: black;
+  color: white; 
+}
+
+
+
+}
+
+/* -BREAKPOINT 2- */
+
+@media (min-width: 992px) {
+
+  main {
+    display: grid; 
+    grid-template-columns:  1fr 1fr 1fr;
+    /* grid-template-rows:  repeat(7, 1fr;) */
+  }
+`
+  .movie:first-child {
+    grid-column:  1 / 4;
+    
+  }
+
+  .movie:first-child .movie-overview {
+    display: block; 
+  }
+
+  .movie-backdrop {
+    display: none; 
+  }
+
+  .movie:first-child .movie-backdrop {
+    display: block;   
+  }
+
+  .movie-poster {
+    display: inline-block; 
+  }
+
+  .movie:first-child .movie-poster {
+    display: none; 
+  }
+  
+
+  
+
+  .movie-overview {
+    display: none; 
+  }
+
+}
